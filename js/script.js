@@ -2,8 +2,8 @@
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
-    document.getElementById("mySidenav").style.width = "500px";
-    document.getElementById("main").style.marginLeft = "500px";
+    document.getElementById("mySidenav").style.width = "35%";
+    document.getElementById("main").style.marginLeft = "35%";
 }
 
 /* Set the width of the side navigation to 0 and the left margin of the page content to 0 */
@@ -12,6 +12,12 @@ function closeNav() {
     document.getElementById("main").style.marginLeft = "0";
 }
 
+
+function moveNav() {
+    var isOpen = (document.getElementById("mySidenav").style.width !== "0px");
+    if(isOpen) closeNav();
+    else openNav();
+}
 
 // Condtions add and remove part
 var idcond=1;
