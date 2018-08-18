@@ -1,7 +1,8 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-
+    <meta charset="UTF-8">
+    <title>index</title>
 
 
     <meta name = "viewport" content = "width = device-width, initial-scale = 1">
@@ -9,96 +10,115 @@
           href = "https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel = "stylesheet"
           href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script type = "text/javascript"
+            src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
     </script>
 
     <link rel="stylesheet" href="css/style.css"/>
     <script  src="js/script.js"></script>
 
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('select').material_select();
+        });
+    </script>
+
+
 
 </head>
 
+
 <body>
 
-<div class="container">
+
+<div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+    <h3>Collapsible</h3>
+
     <br /><br />
     <button class="waves-effect waves-light btn" onClick="expandAll();"><i class="material-icons left">fullscreen</i>Expand All</button>
     <button class="waves-effect waves-light btn" onClick="collapseAll();"><i class="material-icons left">fullscreen_exit</i>Collapse All</button>
     <br /><br />
-    <ul class="collapsible" data-collapsible="expandable">
+
+    <ul class="collapsible">
         <li>
-            <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i><a name="987"/>First</a></div>
-            <div class="collapsible-body"><p>First Things First</p></div>
+            <div class="collapsible-header"><i class="material-icons">filter_drama</i>First</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit ametdddddddddddddddddddddddddddddddddddddddd
+                ddddddddddddddddddddddddddd
+                .</span></div>
         </li>
         <li>
-            <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Second</div>
-            <div class="collapsible-body"><p>Give me a second ...</p></div>
+            <div class="collapsible-header"><i class="material-icons">place</i>Second</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
         </li>
         <li>
-            <div class="collapsible-header"><i class="mdi-navigation-chevron-right"></i>Third</div>
-            <div class="collapsible-body"><p>I don't like being a third wheel</div>
+            <div class="collapsible-header"><i class="material-icons">whatshot</i>Third</div>
+            <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
         </li>
     </ul>
 
-</div>
+    <!--
+        <h4>Databases :</h4>
+        <div id="DBList" class="input-field col s12">
+            <select name="DB" id="DBSelect">
+                <option value="" disabled selected>Select your DataBase</option>
+                <option value="DB_1">DB 1</option>
+                <option value="DB_2">DB 2</option>
 
+             <!--   <%@ page import="java.util.*" %>>
+                <%
+                ArrayList<String> DBs = (ArrayList<String>) request.getAttribute("DBs");
 
-<!--
-<div class="container">
-    <h2>Accordion Example</h2>
-    <p><strong>Note:</strong> The <strong>data-parent</strong> attribute makes sure that all collapsible elements under the specified parent will be closed when one of the collapsible item is shown.</p>
-    <div class="panel-group" id="accordion">
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Collapsible Group 1</a>
-                </h4>
-            </div>
-            <div id="collapse1" class="panel-collapse collapse in">
-                <div class="panel-body">
-                    <ul>
-                        <li>
-                            hi
-                        </li>
-                        <li> hiho</li>
-                        <li>ok</li>
-                    </ul>
+                for(int i = 0;i<DBs.size();i++){
+                out.println("<option value="+DBs.get(i)+">"+DBs.get(i)+"</option>");
+                }
+                %>  hna kain comment
+
+            </select>
+        </div>
+
+        <br>
+        <h4>Request type :</h4>
+        <div id="requestType">
+            <p>
+                <label>
+                    <input id="choice_1" name="RequestType" type="radio" value="Spatiale" checked />
+                    <label for="choice_1">Spatiale<label>
+                    </label>
+            </p>
+            <p>
+                <label>
+                    <input id="choice_2" name="RequestType" type="radio" value="Attributaire" />
+                    <label for="choice_2">Attributaire </label>
+                </label>
+            </p>
+        </div>
+
+        <br><br>
+        <div id="where">
+            <h4>Make ur conditions</h4> <br> <br>
+            <div id="conditions">
+                <div id=divCond1'>
+                    <h6>Condition 1 : </h6>
+                    <input id="condition1" type="text" name='+value+'[]>
                 </div>
             </div>
+            <button type="button" class="btn waves-effect waves-light" id="add" >Add More</button>
+            <button type="button" class="btn waves-effect red accent-4" id="remove" >Remove</button>
         </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse2">Collapsible Group 2</a>
-                </h4>
-            </div>
-            <div id="collapse2" class="panel-collapse collapse">
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            </div>
-        </div>
-        <div class="panel panel-default">
-            <div class="panel-heading">
-                <h4 class="panel-title">
-                    <a data-toggle="collapse" data-parent="#accordion" href="#collapse3">Collapsible Group 3</a>
-                </h4>
-            </div>
-            <div id="collapse3" class="panel-collapse collapse">
-                <div class="panel-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit,
-                    sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</div>
-            </div>
-        </div>
-    </div>
+    -->
+
+
 </div>
--->
 
 
+<!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
+<div id="main">
+    <h2>Home</h2>
+    <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; open</span>
+</div>
 
-<!--JavaScript at end of body for optimized loading-->
-<script type="text/javascript" src="js/materialize.min.js"></script>
 </body>
 </html>
-
