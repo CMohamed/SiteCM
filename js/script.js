@@ -49,3 +49,20 @@ function collapseAll(){
     $(".collapsible").collapsible({accordion: false});
 }
 
+
+// radio selection
+$(document).ready(function() {
+    $("input[name$='RequestType']").click(function() {
+        var test = $(this).val();
+
+        $("div.desc").hide();
+        $("#"+test).show();
+    });
+});
+
+// tags attributaire request
+$('.chips').chips();
+$('.chips-placeholder').chips({
+    placeholder: 'Enter a tag',
+    secondaryPlaceholder: '+Tag',
+});

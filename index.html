@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+
     <title>index</title>
 
 
-    <meta name = "viewport" content = "width = device-width, initial-scale = 1">
+    <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
     <link rel = "stylesheet"
           href = "https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel = "stylesheet"
@@ -58,22 +58,58 @@
         <li>
             <div class="collapsible-header"><i class="material-icons">search</i>Request</div> <!-- filter_lis filter_b_and_w -->
             <div class="collapsible-body"><span>
-                hna lplanat d request
+                <br>
+                Choose your request type :
 
-                <h4>Request type :</h4>
+                <h5>Request type :</h5>
                 <div id="requestType">
-                    <p>
                         <label>
-                            <input id="choice_1" name="RequestType" type="radio" value="Spatiale" checked />
-                            <label for="choice_1">Spatiale<label>
+                            <input id="sp" name="RequestType" type="radio" value="Spatiale"  />
+                            <label for="sp">Spatiale<label>
                             </label>
-                    </p>
-                    <p>
                         <label>
-                            <input id="choice_2" name="RequestType" type="radio" value="Attributaire" />
-                            <label for="choice_2">Attributaire </label>
+                            <input id="attr" name="RequestType" type="radio" value="Attributaire" />
+                            <label for="attr">Attributaire </label>
                         </label>
-                    </p>
+                </div>
+                <br>
+                <div id="Attributaire" style="display: none" class="desc">
+                    <!--
+                    <div class="chip chips-placeholder">
+                        Tag
+                        <i class="close material-icons">close</i>
+
+                    </div>
+                    <br>
+                    <input class="custom-class">
+-->
+
+                    <div class="row">
+                        <form class="col s12">
+                            <div class="row">
+                                <div class="input-field col s12">
+                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
+                                    <label for="textarea1">Requests (sperated by ;)</label>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div id="Spatiale" style="display: none" class="desc">
+                    hna kain deux methodes ya n3toh une liste (dkchi li kna drna b JEE)
+                    ya hwa etaper la couche mn 3ndo
+
+                    <div class="input-field col s12">
+                        <select name="tablesSource" id="tablesSeletSource">
+                            <option value="" disabled selected>Select Source Layer</option>"
+                        </select>
+                    </div>
+                    <br>
+                    <div class="input-field col s12">
+                        <select name="tablesCible" id="tablesSeletCible">
+                            <option value="" disabled selected>Select Cible Layer</option>"
+                        </select>
+                    </div>
                 </div>
 
             </span></div>
