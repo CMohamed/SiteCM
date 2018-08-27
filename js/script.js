@@ -66,3 +66,22 @@ $('.chips-placeholder').chips({
     placeholder: 'Enter a tag',
     secondaryPlaceholder: '+Tag',
 });
+// color
+$(function() {
+    $('#demo-component').colorpicker({
+        component: '.btn'
+    });
+});
+// color background
+
+$(function() {
+    $('#demo2').colorpicker({
+        // Alpha is not supported for some html elements.
+        format: 'rgb',
+        // Gets the actual background color
+        color: $('#demo2').css('background-color')
+    }).on('changeColor', function(ev) {
+        // Sets the new color while it is changing.
+        $(this).css('background-color',ev.color.toHex());
+    });
+});
