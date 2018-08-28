@@ -30,8 +30,10 @@ $(document).on('click', '#add', function(){
 
 $(document).on('click', '#remove', function(){
     var d ="#divCond"+idcond;
-    $(d).remove();
-    if (idcond>1 ) idcond--;
+    if (idcond>1 ){
+        $(d).remove();
+        idcond--;
+    }
 });
 
 //collapse
