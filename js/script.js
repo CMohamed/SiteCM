@@ -90,7 +90,7 @@ for (i = 0; i < x.length; i++) {
 
 $(document).ready (
     function() {
-        $( "#sortlist" ).Sortable( {
+        $( "#sortlist" ).sortable({
             accept : 'sortable_item',
             axis : 'vertically',
             opacity : 0.6,
