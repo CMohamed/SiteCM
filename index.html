@@ -48,9 +48,9 @@
             <div class="collapsible-body"><span>
                 hna andir les couches o atawichs
 
-                <ul class="collection with-header">
-                    <li class="collection-header"><h5>Layers</h5></li>
-                    <li class="collection-item">
+                <ul id="sortlist" class="collection with-header">
+                    <li class="sortable_item collection-header"><h5>Layers</h5></li>
+                    <li class="sortable_item collection-item">
                         <div><i class="material-icons secondary-content">map</i>Provinces
                             <i class="material-icons secondary-content">remove_red_eye</i>
                             <i class="material-icons secondary-content">delete</i>
@@ -60,7 +60,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="collection-item">
+                    <li class="sortable_item collection-item">
                         <div><i class="material-icons secondary-content">map</i>Provinces2
                             <i class="material-icons secondary-content">remove_red_eye</i>
                             <i class="material-icons secondary-content">delete</i>
@@ -70,7 +70,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="collection-item">
+                    <li class="sortable_item collection-item">
                         <div><i class="material-icons secondary-content">map</i>Provinces
                             <i class="material-icons secondary-content">remove_red_eye</i>
                             <i class="material-icons secondary-content">delete</i>
@@ -134,19 +134,16 @@
                     <div id="where">
 
                         <form action="" method="get" id="attributeRequest">
-                            <h5>Tables</h5>
                             <div class="input-field col s12">
                                 <select name="tables" id="tables">
                                     <option value="" disabled selected>Tables</option>"
                                 </select>
                             </div>
-                            <h5>Champs</h5>
                             <div class="input-field col s12">
                                 <select name="champs" id="champs">
                                     <option value="" disabled selected>Champs</option>"
                                 </select>
                             </div>
-                            <h5>Geometry</h5>
                             <div class="input-field col s12">
                                 <select name="geometry" id="geometry">
                                     <option value="" disabled selected>Champs geometry</option>"
