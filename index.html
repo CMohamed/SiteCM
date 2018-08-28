@@ -76,7 +76,7 @@
                             <i class="material-icons secondary-content">delete</i>
                             <div class="icon secondary-content" style="position:relative; display:inline-block">
                                 <i class="material-icons secondary-content">color_lens</i>
-                                <input type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
+                                <input type="color" value="#26a69a" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
                             </div>
                         </div>
                     </li>
@@ -134,19 +134,24 @@
                 <div id="Spatiale" style="display: none" class="desc">
                     hna kain deux methodes ya n3toh une liste (dkchi li kna drna b JEE)
                     ya hwa etaper la couche mn 3ndo
+                    <form action="" method="get" id="spatialeRequest">
+                        <div class="input-field col s12">
+                            <select name="tablesSource" id="tablesSeletSource">
+                                <option value="" disabled selected>Select Source Layer</option>"
+                            </select>
+                        </div>
+                        <div class="input-field col s12">
+                            <select name="tablesCible" id="tablesSeletCible">
+                                <option value="" disabled selected>Select Cible Layer</option>"
+                            </select>
+                        </div>
 
-                    <div class="input-field col s12">
-                        <select name="tablesSource" id="tablesSeletSource">
-                            <option value="" disabled selected>Select Source Layer</option>"
-                        </select>
-                    </div>
-                    <br>
-                    <div class="input-field col s12">
-                        <select name="tablesCible" id="tablesSeletCible">
-                            <option value="" disabled selected>Select Cible Layer</option>"
-                        </select>
-                    </div>
+                    </form>
+                    <button class="btn waves-effect waves-light" type="submit" name="action" value="Submit" form="spatialeRequest">Submit
+                        <i class="material-icons right">send</i>
+                    </button>
                 </div>
+                <br>
 
             </span></div>
         </li>

@@ -73,3 +73,13 @@ function changeColor() {
     var inputColor = iconTag.
     this.style.color=
 }*/
+/*
+$(document).ready
+var x = document.getElementsByClassName("icon secondary-content");
+var i;
+for (i = 0; i < x.length; i++) {
+    var y=x[i].childNodes;
+    y[0].style.color=y[1].value;
+}
+
+*/
