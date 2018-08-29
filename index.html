@@ -15,18 +15,24 @@
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
     </script>
 
-    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
-    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
-
     <link rel="stylesheet" href="css/style.css"/>
     <script  src="js/script.js"></script>
-<!--
+
     <script type="text/javascript">
         $(document).ready(function() {
             $('select').material_select();
+
         });
     </script>
--->
+
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script>
+        $( function() {
+            $( "#sortable" ).sortable();
+            // $( "#sortable" ).disableSelection();
+        } );
+    </script>
+
 
 
 </head>
@@ -39,21 +45,21 @@
     <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
 
     <h3>Menu</h3>
-<!--
-    <br /><br />
-    <button class="waves-effect waves-light btn" onClick="expandAll();"><i class="material-icons left">fullscreen</i>Expand All</button>
-    <button class="waves-effect waves-light btn" onClick="collapseAll();"><i class="material-icons left">fullscreen_exit</i>Collapse All</button>
-    <br /><br />
--->
+    <!--
+        <br /><br />
+        <button class="waves-effect waves-light btn" onClick="expandAll();"><i class="material-icons left">fullscreen</i>Expand All</button>
+        <button class="waves-effect waves-light btn" onClick="collapseAll();"><i class="material-icons left">fullscreen_exit</i>Collapse All</button>
+        <br /><br />
+    -->
     <ul class="collapsible">
         <li>
             <div class="collapsible-header"><i class="material-icons">layers</i>Layers</div>
             <div class="collapsible-body"><span>
                 hna andir les couches o atawichs
 
-                <ul id="sortlist" class="collection with-header">
+                <ul id="sortable" class="collection with-header">
                     <li class="collection-header"><h5>Layers</h5></li>
-                    <li class="sortable_item collection-item">
+                    <li class="collection-item">
                         <div><i class="material-icons secondary-content">map</i>Provinces
                             <i class="material-icons secondary-content">remove_red_eye</i>
                             <i class="material-icons secondary-content">delete</i>
@@ -63,7 +69,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="sortable_item collection-item">
+                    <li class="collection-item">
                         <div><i class="material-icons secondary-content">map</i>Provinces2
                             <i class="material-icons secondary-content">remove_red_eye</i>
                             <i class="material-icons secondary-content">delete</i>
@@ -73,7 +79,7 @@
                             </div>
                         </div>
                     </li>
-                    <li class="sortable_item collection-item">
+                    <li class="collection-item">
                         <div><i class="material-icons secondary-content">map</i>Provinces
                             <i class="material-icons secondary-content">remove_red_eye</i>
                             <i class="material-icons secondary-content">delete</i>
@@ -113,58 +119,46 @@
                 </div>
                 <br>
                 <div id="Attributaire" style="display: none" class="desc">
-                    <!--
-                    <div class="chip chips-placeholder">
-                        Tag
-                        <i class="close material-icons">close</i>
 
-                    </div>
-                    <br>
-                    <input class="custom-class">
--->
-<!--
-                    <div class="row">
-                        <form class="col s12">
-                            <div class="row">
-                                <div class="input-field col s12">
-                                    <textarea id="textarea1" class="materialize-textarea"></textarea>
-                                    <label for="textarea1">Requests (sperated by ;)</label>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                    -->
                     <div id="where">
 
                         <form action="" method="get" id="attributeRequest">
+
                             <div class="input-field col s12">
                                 <select name="tables" id="tables">
                                     <option value="" disabled selected>Tables</option>"
                                 </select>
                             </div>
+
                             <div class="input-field col s12">
                                 <select name="champs" id="champs">
                                     <option value="" disabled selected>Champs</option>"
                                 </select>
                             </div>
+
                             <div class="input-field col s12">
                                 <select name="geometry" id="geometry">
                                     <option value="" disabled selected>Champs geometry</option>"
                                 </select>
                             </div>
 
-                        </form>
-
-
-                        <h5>Make ur conditions</h5> <br>
-                        <div id="conditions">
-                            <div id='divCond1'>
-                                Condition 1 :
-                                <input id="condition1" type="text" name='+value+'[]>
+                            <h5>Make ur conditions</h5> <br>
+                            <div id="conditions">
+                                <div id='divCond1'>
+                                    Condition 1 :
+                                    <input id="condition1" type="text" name='+value+'[]>
+                                </div>
                             </div>
-                        </div>
-                        <button type="button" class="btn waves-effect waves-light" id="add" >Add More</button>
-                        <button type="button" class="btn waves-effect red accent-4" id="remove" >Remove</button>
+                            <button type="button" class="btn waves-effect waves-light" id="add" >Add More</button>
+                            <button type="button" class="btn waves-effect red accent-4" id="remove" >Remove</button>
+                        </form>
+                        <br>
+                        <button class="btn waves-effect waves-light" type="submit" name="action" value="Submit" form="attributeRequest">Submit
+                            <i class="material-icons right">send</i>
+                        </button>
+
+
+
                     </div>
                 </div>
                 <div id="Spatiale" style="display: none" class="desc">

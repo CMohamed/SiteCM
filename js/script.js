@@ -62,14 +62,7 @@ $(document).ready(function() {
     });
 });
 
-// tags attributaire request
-/*
-$('.chips').chips();
-$('.chips-placeholder').chips({
-    placeholder: 'Enter a tag',
-    secondaryPlaceholder: '+Tag',
-});
-*/
+
 // color function
 /*
 function changeColor() {
@@ -87,10 +80,11 @@ for (i = 0; i < x.length; i++) {
 }
 
 */
-
+/*
 $(document).ready (
     function() {
-        $( "#sortlist" ).sortable({
+
+        $("#sortlist").sortable({
             accept : 'sortable_item',
             axis : 'vertically',
             opacity : 0.6,
@@ -98,4 +92,5 @@ $(document).ready (
                 serial = $.SortSerialize( 'sortlist' );
             }
         });
-    });
+
+    });*/
