@@ -28,7 +28,14 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
         $( function() {
-            $( "#sortable" ).sortable();
+            $( "#sortable" ).sortable({
+                //accept : 'sortable_item',
+                axis: 'vertically',
+                opacity: 0.6,
+                onchange: function (sorted) {
+                    serial = $.SortSerialize('sortlist');
+                }
+            });
             // $( "#sortable" ).disableSelection();
         } );
     </script>
