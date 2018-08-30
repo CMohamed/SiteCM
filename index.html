@@ -87,26 +87,39 @@
                             <div id="requestTables" class="input-field col s12">
                                 <input id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
                                 <select name="tables" id="tables">
-                                    <option value="" disabled selected>Tables</option>"
-                                    <option value="table1" >Table1</option>"
-                                    <option value="table2" >Table2</option>"
+                                    <option value="" disabled selected>Tables</option>
+                                    <option value="table1" >Table1</option>
+                                    <option value="table2" >Table2</option>
                                 </select>
-                                <button onclick="addElement()" type="button" class="btn-floating btn-large waves-effect waves-light">
+                                <button id="T" onclick="addTable()" type="button" class="btn-floating btn-large waves-effect waves-light">
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
 
                             <div id="requestFields" class="input-field col s12">
+                                <input id="textareaFields" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
                                 <select name="champs" id="champs">
-                                    <option value="" disabled selected>Champs</option>"
+                                    <option value="" disabled selected>Champs</option>
+                                    <option value="id" >id</option>
+                                    <option value="ShapeArea" >ShapeArea</option>
                                 </select>
+                                <button id="F" onclick="addField()" type="button" class="btn-floating btn-large waves-effect waves-light">
+                                    <i class="material-icons">add</i>
+                                </button>
                             </div>
 
                             <div id="requestGeomFields" class="input-field col s12">
+                                <input id="textareaGeometry" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
                                 <select name="geometry" id="geometry">
-                                    <option value="" disabled selected>Champs geometry</option>"
+                                    <option value="" disabled selected>Champs geometry</option>
+                                    <option value="Geom1" >Geom1</option>
+                                    <option value="Geom2" >Geom2</option>
                                 </select>
+                                <button id="G" onclick="addGeometry()" type="button" class="btn-floating btn-large waves-effect waves-light">
+                                    <i class="material-icons">add</i>
+                                </button>
                             </div>
+
 
                             <h5>Make ur conditions</h5> <br>
                             <div id="conditions">

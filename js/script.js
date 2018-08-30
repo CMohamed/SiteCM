@@ -1,9 +1,26 @@
-function addElement() {
+function addTable() {
     var tableToAdd = $("#tables").val();
     var oldText = $("#textareaTables").val();
-    if (oldText!="") var newText = oldText+","+tableToAdd;
-    else var newText = tableToAdd;
+    var newText;
+    if (oldText.toString()!=="") newText = oldText+","+tableToAdd;
+    else newText = tableToAdd;
     $("#textareaTables").attr("value" ,newText);
+}
+function addField() {
+    var tableToAdd = $("#champs").val();
+    var oldText = $("#textareaFields").val();
+    var newText;
+    if (oldText.toString()!=="") newText = oldText+","+tableToAdd;
+    else newText = tableToAdd;
+    $("#textareaFields").attr("value" ,newText);
+}
+function addGeometry() {
+    var tableToAdd = $("#geometry").val();
+    var oldText = $("#textareaGeometry").val();
+    var newText;
+    if (oldText.toString()!=="") newText = oldText+","+tableToAdd;
+    else newText = tableToAdd;
+    $("#textareaGeometry").attr("value" ,newText);
 }
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
