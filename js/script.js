@@ -1,3 +1,12 @@
+function posLayer(id){
+    var pos = 1;
+    var lyr = document.getElementById(id);
+    var layers = document.getElementById("sortable");
+    for(i=1;i<layers.childNodes.length;i+=2){
+        if (lyr===layers.childNodes[i]) return (i-1)/2 ;
+    }
+}
+
 function GenerateSQL() {
     var sql ="Select " ;
     var tables =document.getElementById("textareaTables").value ;
