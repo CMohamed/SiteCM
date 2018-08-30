@@ -1,4 +1,18 @@
-
+function GenerateSQL() {
+    var sql ="Select " ;
+    var tables =document.getElementById("textareaTables").value ;
+    var fields =document.getElementById("textareaFields").value ;
+    sql = sql + fields + " from " + tables + " where ";
+    var conditions = document.getElementById("condition1").value ;
+    for(i=2 ;i<=idcond ;i++){
+        var c = "condition"+i;
+        conditions = conditions + " and "+document.getElementById("condition1").value ;
+    }
+    if (conditions =="") sql = sql + "1=1" ;
+    else sql = sql + conditions + ";" ;
+    document.getElementById("SQL").childNodes[1].innerHTML = sql ;
+    return sql;
+}
 
 function btnClr() {
     var x =document.activeElement;

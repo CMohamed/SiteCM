@@ -79,11 +79,11 @@
                 </div>
                 <br>
                 <div id="Attributaire" style="display: none" class="desc">
-
+                    <div id="SQL">
+                        <p>hna  sql</p>
+                    </div>
                     <div id="where">
-
                         <form action="" method="get" id="attributeRequest">
-
                             <div id="requestTables" class="input-field col s12">
                                 <input id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
                                 <select name="tables" id="tables">
@@ -95,7 +95,6 @@
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
-
                             <div id="requestFields" class="input-field col s12">
                                 <input id="textareaFields" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
                                 <select name="champs" id="champs">
@@ -107,7 +106,6 @@
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
-
                             <div id="requestGeomFields" class="input-field col s12">
                                 <input id="textareaGeometry" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
                                 <select name="geometry" id="geometry">
@@ -119,20 +117,18 @@
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
-
-
                             <h5>Make ur conditions</h5> <br>
                             <div id="conditions">
                                 <div id='divCond1'>
                                     Condition 1 :
-                                    <input id="condition1" type="text" name='+value+'[]>
+                                    <input id="condition1" type="text">
                                 </div>
                             </div>
                             <button type="button" class="btn waves-effect waves-light" id="add" >Add More</button>
                             <button type="button" class="btn waves-effect red accent-4" id="remove" >Remove</button>
                         </form>
                         <br>
-                        <button class="btn waves-effect waves-light" type="submit" name="action" value="Submit" form="attributeRequest">Submit
+                        <button onclick="GenerateSQL()" class="btn waves-effect waves-light" >Submit <!-- type="submit" name="action" value="Submit" form="attributeRequest" hdchi kan f buttn -->
                             <i class="material-icons right">send</i>
                         </button>
 
