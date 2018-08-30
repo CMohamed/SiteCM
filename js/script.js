@@ -1,3 +1,13 @@
+function ShowOptions(id) {
+//    var opts = document.getElementById("requestTables") ;
+    $("#"+id).show();
+
+}
+function HideOptions(id) {
+    $("#"+id).hide();
+}
+
+
 function posLayer(id){
     var pos = 1;
     var lyr = document.getElementById(id);

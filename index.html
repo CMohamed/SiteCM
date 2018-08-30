@@ -84,8 +84,8 @@
                     </div>
                     <div id="where">
                         <form action="" method="get" id="attributeRequest">
-                            <div id="requestTables" class="input-field col s12">
-                                <input id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
+                            <input onfocus="ShowOptions('requestTables')" onblur="HideOptions('requestTables')" id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
+                            <div style="display: none" id="requestTables" class="input-field col s12">
                                 <select name="tables" id="tables">
                                     <option value="" disabled selected>Tables</option>
                                     <option value="table1" >Table1</option>
@@ -95,8 +95,9 @@
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
-                            <div id="requestFields" class="input-field col s12">
-                                <input id="textareaFields" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
+
+                            <input onfocus="ShowOptions('requestFields')" id="textareaFields" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
+                            <div style="display: none" id="requestFields" class="input-field col s12">
                                 <select name="champs" id="champs">
                                     <option value="" disabled selected>Champs</option>
                                     <option value="id" >id</option>
@@ -106,8 +107,9 @@
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
-                            <div id="requestGeomFields" class="input-field col s12">
-                                <input id="textareaGeometry" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
+
+                            <input onfocus="ShowOptions('requestGeomFields')" id="textareaGeometry" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
+                            <div style="display: none" id="requestGeomFields" class="input-field col s12">
                                 <select name="geometry" id="geometry">
                                     <option value="" disabled selected>Champs geometry</option>
                                     <option value="Geom1" >Geom1</option>
