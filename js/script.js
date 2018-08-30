@@ -1,3 +1,11 @@
+
+
+function btnClr() {
+    var x =document.activeElement;
+    var clr = x.value;
+    x.parentNode.style.color=clr; //we can use firstChild
+}
+
 function addTable() {
     var tableToAdd = document.getElementById("tables").value;
     var oldText = document.getElementById("textareaTables").value;

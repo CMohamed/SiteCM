@@ -171,13 +171,13 @@
 
                 <ul id="sortable" class="collection with-header">
                     <li class="collection-header"><h5>Layers</h5></li>
-                    <li style="cursor:pointer" class="collection-item">
-                        <div><i class="material-icons secondary-content">map</i>Provinces
+                    <li class="collection-item">
+                        <div><i class="material-icons secondary-content">map</i>Region
                             <i class="material-icons secondary-content">remove_red_eye</i>
                             <i onclick="$(this).parent().parent().remove()" class="material-icons secondary-content">delete</i>
-                            <div class="icon secondary-content" style="position:relative; display:inline-block">
-                                <i class="material-icons secondary-content" >color_lens</i>
-                                <input type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
+                            <div style="color:red" class="icon secondary-content" style="position:relative; display:inline-block">
+                                <i class="btnColor material-icons secondary-content" >color_lens</i>
+                                <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
                             </div>
                         </div>
                     </li>
@@ -186,8 +186,8 @@
                             <i style="cursor:pointer" class="material-icons secondary-content">remove_red_eye</i>
                             <i style="cursor:pointer" onclick="$(this).parent().parent().remove()" class="material-icons secondary-content">delete</i>
                             <div class="icon secondary-content" style="position:relative; display:inline-block">
-                                <i style="cursor:pointer" class="material-icons secondary-content">color_lens</i>
-                                <input type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
+                                <i style="cursor:pointer;color:red" class="btnColor material-icons secondary-content">color_lens</i>
+                                <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
                             </div>
                         </div>
                     </li>
