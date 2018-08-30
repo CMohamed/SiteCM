@@ -4,7 +4,7 @@ function ShowOptions(id) {
 
 }
 function HideOptions(id) {
-    $("#"+id).hide();
+    //$("#"+id).hide();
 }
 
 
