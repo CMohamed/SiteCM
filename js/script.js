@@ -1,26 +1,40 @@
 function addTable() {
+    var tableToAdd = document.getElementById("tables").value;
+    var oldText = document.getElementById("textareaTables").value;
+    var newText="";
+    if (oldText.toString()!="") newText = oldText+","+tableToAdd;
+    else newText = tableToAdd;
+    document.getElementById("textareaTables").value=newText;
+    /*
     var tableToAdd = $("#tables").val();
     var oldText = $("#textareaTables").val();
     var newText;
     if (oldText.toString()!="") newText = oldText+","+tableToAdd;
     else newText = tableToAdd;
     $("#textareaTables").attr("value" ,newText);
+    */
 }
 function addField() {
-    var tableToAdd = $("#champs").val();
-    var oldText = $("#textareaFields").val();
-    var newText;
+    var tableToAdd = document.getElementById("champs").value;
+    var oldText = document.getElementById("textareaFields").value;
+    var newText="";
     if (oldText.toString()!="") newText = oldText+","+tableToAdd;
     else newText = tableToAdd;
-    $("#textareaFields").attr("value" ,newText);
+    document.getElementById("textareaFields").value=newText;
 }
 function addGeometry() {
-    var tableToAdd = $("#geometry").val();
+    var tableToAdd = document.getElementById("geometry").value;
+    var oldText = document.getElementById("textareaGeometry").value;
+    var newText="";
+    if (oldText.toString()!="") newText = oldText+","+tableToAdd;
+    else newText = tableToAdd;
+    document.getElementById("textareaGeometry").value=newText;
+/*    var tableToAdd = $("#geometry").val();
     var oldText = $("#textareaGeometry").val();
     var newText;
     if (oldText.toString()!="") newText = oldText+","+tableToAdd;
     else newText = tableToAdd;
-    $("#textareaGeometry").attr("value" ,newText);
+    $("#textareaGeometry").attr("value" ,newText);*/
 }
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
