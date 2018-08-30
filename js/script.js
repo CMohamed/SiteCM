@@ -1,4 +1,10 @@
-
+function addElement() {
+    var tableToAdd = $("#tables").val();
+    var oldText = $("#textareaTables").val();
+    if (oldText!="") var newText = oldText+","+tableToAdd;
+    else var newText = tableToAdd;
+    $("#textareaTables").attr("value" ,newText);
+}
 
 /* Set the width of the side navigation to 250px and the left margin of the page content to 250px */
 function openNav() {
