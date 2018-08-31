@@ -53,3 +53,16 @@
     width : 20px ;
     height :20px ;
 }
+
+::placeholder {
+    color: rgb(102, 194, 181);
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+    color: #66c2b5;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+    color: #66c2b5;
+}
