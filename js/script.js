@@ -3,8 +3,13 @@ function ShowOptions(id) {
     $("#"+id).show();
 
 }
+
+function desFocus(event)
+{
+    console.log(event);
+}
 function HideOptions(id) {
-    //$("#"+id).hide();
+    $("#"+id).hide();
 }
 
 
@@ -39,7 +44,9 @@ function btnClr() {
     x.parentNode.style.color=clr; //we can use firstChild
 }
 
-function addTable() {
+function addTable(ev) {
+    //ev.stopPropagation();
+    console.log(ev);
     var tableToAdd = document.getElementById("tables").value;
     var oldText = document.getElementById("textareaTables").value;
     var newText="";
@@ -137,6 +144,19 @@ $(document).ready(function() {
 
         $("div.desc").hide();
         $("#"+test).show();
+    });
+
+    document.getElementById("textareaTables").addEventListener('focus',function(){
+        HideOptions('requestFields');
+        HideOptions('requestGeomFields');
+    });
+    document.getElementById("textareaFields").addEventListener('focus',function(){
+        HideOptions('requestTables');
+        HideOptions('requestGeomFields');
+    });
+    document.getElementById("textareaGeometry").addEventListener('focus',function(){
+        HideOptions('requestTables');
+        HideOptions('requestFields');
     });
 });
 

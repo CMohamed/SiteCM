@@ -80,11 +80,14 @@
                 <br>
                 <div id="Attributaire" style="display: none" class="desc">
                     <div id="SQL">
-                        <p>hna  sql</p>
+                        <p>hna  sql</p>²
                     </div>
                     <div id="where">
+
                         <form action="" method="get" id="attributeRequest">
-                            <input onfocus="ShowOptions('requestTables')" onblur="HideOptions('requestTables')" id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
+
+                            <input onfocus="ShowOptions('requestTables')" id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 0;"></input>
+
                             <div style="display: none" id="requestTables" class="input-field col s12">
                                 <select name="tables" id="tables">
                                     <option value="" disabled selected>Tables</option>
@@ -109,6 +112,7 @@
                             </div>
 
                             <input onfocus="ShowOptions('requestGeomFields')" id="textareaGeometry" type="text" placeholder="Selected Geometry Fields" class="materialize-textarea" style="padding: 0;"></input>
+
                             <div style="display: none" id="requestGeomFields" class="input-field col s12">
                                 <select name="geometry" id="geometry">
                                     <option value="" disabled selected>Champs geometry</option>
@@ -119,17 +123,23 @@
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
-                            <h5>Make ur conditions</h5> <br>
+
+                            <h5>Les Filtres</h5> <br>
+
                             <div id="conditions">
                                 <div id='divCond1'>
                                     Condition 1 :
-                                    <input id="condition1" type="text">
+                                    <input id="condition1" type="text" >
                                 </div>
                             </div>
-                            <button type="button" class="btn waves-effect waves-light" id="add" >Add More</button>
+
+                            <button type="button" class="btn waves-effect waves-light" id="add" >Add Filter</button>
+
                             <button type="button" class="btn waves-effect red accent-4" id="remove" >Remove</button>
                         </form>
+
                         <br>
+
                         <button onclick="GenerateSQL()" class="btn waves-effect waves-light" >Submit <!-- type="submit" name="action" value="Submit" form="attributeRequest" hdchi kan f buttn -->
                             <i class="material-icons right">send</i>
                         </button>
@@ -165,7 +175,7 @@
         <li>
             <div class="collapsible-header"><i class="material-icons">layers</i>Layers</div>
             <div class="collapsible-body"><span>
-                hna andir les couches o atawichs
+                <br>
 
                 <ul id="sortable" class="collection with-header">
                     <li id="lyr0" class="collection-header"><h5>Layers</h5></li>
@@ -200,21 +210,37 @@
                         </div>
                     </li>
                 </ul>
-            Fin.
+            <br>
             </span></div>
         </li>
 
         <li>
             <div class="collapsible-header"><i class="material-icons">print</i>Print</div>
             <div class="collapsible-body"><span>
-                hna lconfig d impression
+                <br>
+                Configuration:
+                <br>
+                <div class="input-field col s12">
+                            <select name="exportFormat" >
+                                <option value="Selectioner Format" disabled selected="selected">Selectioner Format</option>
+                                <option value="PDF" >PDF</option>
+                                <option value="JPEG">JPEG</option>
+                            </select>
+                </div>  
+                <br>
+                <button class="btn waves-effect waves-light" type="submit" name="action" value="Submit" form="spatialeRequest">Lancer impression
+                        <i class="material-icons right">send</i>
+                </button>   
+                <br>
+                <br>
+
             </span></div>
         </li>
         <li>
             <div class="collapsible-header"><i class="material-icons">storage</i>Configuration</div>
             <div class="collapsible-body"><span>
                 <div id="iconsConfig" style="opacity: 0">vpn_lock/tune/assignment.</div>
-                <br>
+                
 
                 <form style="size :A5" >
                     URL :
@@ -222,9 +248,9 @@
                     Driver :
                     <input type="text" name="driver" required="" placeholder="driver">
                     User :
-                    <input type="text" name="user" required="" placeholder="username">
+                    <input type="text" name="user" required="" placeholder="nom d'utilisateur">
                     Password :
-                    <input type="password" name="pass" required="" placeholder="write ur password">
+                    <input type="password" name="pass" required="" placeholder="mot de passe">
                     <button class="btn waves-effect waves-light">
                         <i class="material-icons right">send</i>Envoyer
                     </button>
