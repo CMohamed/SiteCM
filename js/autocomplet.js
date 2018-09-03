@@ -1,9 +1,11 @@
 var fields = [];
 var fieldsDetails = [];
 var fieldsCom = [];
+var listTables = [];
+var listTablesCom = [];
 
 var urlColumnService = "http://localhost:9090/requestAny/SELECT%20Distinct%20column_name%20,%20table_name,%20data_type%20FROM%20information_schema.columns%20WHERE%20table_catalog%20=%20'EHTP'%20and%20table_schema='public'%20and%20not%20table_name%20in%20('spatial_ref_sys','pointcloud_formats')";
-
+var urlTableService = "http://localhost:9090/requestAny/SELECT Distinct table_name FROM information_schema.columns WHERE table_catalog = 'EHTP' and table_schema='public' and not table_name  in ('spatial_ref_sys','pointcloud_formats')";
 
 $.ajax({
 
@@ -18,11 +20,38 @@ $.ajax({
 			fields.push(fieldsDetails[i].column_name);
 			fieldsCom.push(" | type: " + fieldsDetails[i].data_type + " | table: "  + fieldsDetails[i].table_name);
 		}
+		$( document ).ready(function() {
+				autocomplete(document.getElementById("textareaFields"), fields, fieldsCom);
+				autocomplete(document.getElementById("textareaGeometry"), fields, fieldsCom);
+		});
 
-		autocomplete(document.getElementById("textareaTables"), fields, fieldsCom);
 
 	}
 });
+
+
+$.ajax({
+
+	url: able_schema = urlTableService, 
+	success: function(req)
+	{
+		listTables = req.features;
+		console.log(fieldsDetails);
+
+		for(var i = 0; i<listTables.length;i++)
+		{
+			listTables[i]=listTables[i].table_name;
+			listTablesCom[i]="";
+		}
+		$( document ).ready(function() {
+			autocomplete(document.getElementById("textareaTables"), listTables,listTablesCom);
+		});
+
+
+	}
+});
+
+
 
 
 
@@ -42,7 +71,7 @@ function autocomplete(inp, arr,arrCom) {
       if (!val) { return false;}
       currentFocus = -1;
       /*create a DIV element that will contain the items (values):*/
-      a = document.getElementById(inp.id+"AutoComplete");
+      a = document.createElement("DIV");
       a.setAttribute("id", this.id + "autocomplete-list");
       a.setAttribute("class", "autocomplete-items");
       /*append the DIV element as a child of the autocomplete container:*/
@@ -58,7 +87,10 @@ function autocomplete(inp, arr,arrCom) {
           b.innerHTML += arr[i].substr(val.length);
           /*insert a input field that will hold the current array item's value:*/
           b.innerHTML += "<input type='hidden' value='" + arr[i] + "'>";
-          b.innerHTML += '<span style="text-align:right">' +""+ arrCom[i] + " </span>";
+          if(arrCom[i] != "")
+          {
+         	b.innerHTML += '<span style="text-align:right">' +""+ arrCom[i] + " </span>";
+          }
           /*execute a function when someone clicks on the item value (DIV element):*/
               b.addEventListener("click", function(e) {
               /*insert the value for the autocomplete text field:*/
