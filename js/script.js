@@ -65,7 +65,8 @@ function addLayer(name) {
     var html = '<li  class="collection-item" name="'+name+'">' +
         '        <div >' +name+
         '            <i style="cursor:pointer" class="material-icons secondary-content">map</i>\n' +
-        '            <i style="cursor:pointer" class="material-icons secondary-content">remove_red_eye</i>\n' +
+        '            <i style="cursor:pointer" onclick="$(this).hide();$(this).next().show()" class="material-icons secondary-content">visibility</i>\n' +
+        '            <i style="cursor:pointer ;color: #a2a2a2 ;display: none;" onclick="$(this).hide();$(this).prev().show()" class="material-icons secondary-content">visibility_off</i>' +
         '            <i style="cursor:pointer" onclick="$(this).parent().parent().remove();//lyrNumber--;" class="material-icons secondary-content">delete</i>\n' +
         '            <div class="icon secondary-content" style="position:relative; display:inline-block">\n' +
         '                <i class="btnColor material-icons secondary-content" >color_lens</i>\n' +
