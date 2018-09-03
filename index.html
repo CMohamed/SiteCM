@@ -206,12 +206,16 @@
                     <li id="lyr2" class="collection-item">
                         <div>Provinces2
                             <i style="cursor:pointer" class="material-icons secondary-content">map</i>
-                            <i style="cursor:pointer" class="material-icons secondary-content">remove_red_eye</i>
+
+                            <i style="cursor:pointer" onclick="changeTransparenc()" class="material-icons secondary-content">remove_red_eye</i>
+
                             <i style="cursor:pointer" onclick="$(this).parent().parent().remove()" class="material-icons secondary-content">delete</i>
+
                             <div class="icon secondary-content" style="position:relative; display:inline-block">
                                 <i class="btnColor material-icons secondary-content">color_lens</i>
                                 <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
                             </div>
+
                         </div>
                     </li>
                     <li id="lyr3" class="collection-item">
@@ -219,9 +223,9 @@
                             <i style="cursor:pointer" class="material-icons secondary-content">map</i>
                             <i style="cursor:pointer" class="material-icons secondary-content">remove_red_eye</i>
                             <i style="cursor:pointer" onclick="$(this).parent().parent().remove()" class="material-icons secondary-content">delete</i>
-                            <div class="icon secondary-content" style="cursor: pointer; position:relative; display:inline-block">
+                            <div class="icon secondary-content" style="position:relative; display:inline-block">
                                 <i class="btnColor material-icons secondary-content">color_lens</i>
-                                <input type="color" value="#26a69a" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
+                                <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
                             </div>
                         </div>
                     </li>

@@ -109,7 +109,7 @@ function GenerateSQL() {
 function btnClr() {
     var x =document.activeElement;
     var clr = x.value;
-    x.parentNode.style.color=clr; //we can use firstChild
+    x.parentElement.firstElementChild.style.color=clr; //we can use firstChild
 }
 
 function addTable(ev) {
