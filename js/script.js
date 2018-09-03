@@ -56,7 +56,7 @@ function addLayer(name) {
         '            <i style="cursor:pointer" class="material-icons secondary-content">remove_red_eye</i>\n' +
         '            <i style="cursor:pointer" onclick="$(this).parent().parent().remove();//lyrNumber--;" class="material-icons secondary-content">delete</i>\n' +
         '            <div style="color:red" class="icon secondary-content" style="position:relative; display:inline-block">\n' +
-        '                <i style="cursor:pointer" class="btnColor material-icons secondary-content" >color_lens</i>\n' +
+        '                <i class="btnColor material-icons secondary-content" >color_lens</i>\n' +
         '                <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>\n' +
         '            </div>\n' +
         '        </div>\n' +
