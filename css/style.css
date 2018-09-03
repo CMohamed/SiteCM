@@ -84,3 +84,10 @@ i{
      height: 100%;
      width: 100%;
  }
+
+ .layers {
+     padding-top: 7px;
+     padding-bottom: 7px;
+     padding-right: 10px;
+     padding-left: 10px;
+ }

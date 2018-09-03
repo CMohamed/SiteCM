@@ -94,7 +94,7 @@ function addLayer(name) {
         '                <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>\n' +
         '            </div>' +
         '            <p class="range-field">\n' +
-        '                <input type="range" id="test5" min="0" max="100" /> <i class="material-icons secondary-content" style="position: in">invert_colors</i>\n' +
+        '                <span style="display: inline-block;padding: 0 ;width: 90%"><input type="range" id="test5" min="0" max="100" /> </span><i style="width: 10%"  class="material-icons secondary-content" >invert_colors</i>\n' +
         '            </p>' +
         '        </div>\n' +
         '    </li>'
