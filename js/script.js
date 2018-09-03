@@ -1,3 +1,15 @@
+function removeLayer(){
+    //console.log($(this));
+    $(this).parent().parent().remove();
+}
+function showLayer(){
+
+}
+function hideLayer(){
+    console.log($(this));
+    $(this).hide();
+}
+
 function GenerateConfig() {
     var config ="" ;
     var url = document.getElementById("url").value ;
