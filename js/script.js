@@ -1,10 +1,30 @@
+function updateSelectList1(id, list){
+    var select = document.getElementById(id);
+    for(i=0; i < list.length;i++){
+        var l = document.createElement("option");
+        l.value = list[i];
+        select.appendChild(l);
+    }
+}
+function updateSelectList(id,opts) {
+    var x = document.getElementById(id);
+    for (i=0;i<opts.length ; i++){
+        var c = document.createElement("option");
+        c.text = opts[i];
+        c.value = opts[i];
+        x.options.add(c,x.children.length);
+    }
+}
+
 function removeLayer(){
+    // remove layer by click on delete button
     //console.log($(this));
     $(this).parent().parent().remove();
 }
 function showLayer(){
-
+    // dik conclick dial icons makatkhdamch m3a les fcts m3rftch 3lach mais momkin ndiro chi span ola ...
 }
+
 function hideLayer(){
     console.log($(this));
     $(this).hide();
