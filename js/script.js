@@ -34,7 +34,6 @@ function GenerateSQL() {
     }
     if (conditions =="") sql = sql + "1=1" ;
     else sql = sql + conditions + ";" ;
-    document.getElementById("SQL").childNodes[1].innerHTML = sql ;
     return sql;
 }
 
@@ -107,9 +106,10 @@ function moveNav() {
 // Condtions add and remove part
 var idcond=1;
 
+
 $(document).on('click', '#add', function(){
     idcond++;
-    var html = '<div id=divCond'+idcond+'> <h6>Condition '+idcond+' : </h6> <input id=condition'+idcond.toString()+' type="text" name="myInput"></div>';
+    var html = '<div id=divCond'+idcond+' > <h6>Condition '+idcond+' : </h6> <input style="padding: 5px" id=condition'+idcond.toString()+' type="text"  class="conditionWhere" name="myInput"></div>';
     $('#conditions').append(html);
 });
 
@@ -145,6 +145,13 @@ $(document).ready(function() {
         $("div.desc").hide();
         $("#"+test).show();
     });
+
+    $(".conditionWhere").on('focus',function(){
+        HideOptions('requestFields');
+        HideOptions('requestGeomFields');
+        HideOptions('requestTables');
+    });
+
 
     document.getElementById("textareaTables").addEventListener('focus',function(){
         HideOptions('requestFields');
