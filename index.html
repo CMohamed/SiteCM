@@ -82,8 +82,9 @@
 
                         <form action="" method="get" id="attributeRequest">
 
-                            <input onfocus="ShowOptions('requestTables')" id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 5px;"></input>
-                            <div id="textareaTablesAutoComplete"></div>
+                            <div>
+                                <input onfocus="ShowOptions('requestTables')" id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 5px;"></input>
+                            </div>
 
                             <div style="display: none;margin-bottom: 10px;" id="requestTables" class="input-field col s12">
                                 <select name="tables" id="tables">
@@ -96,7 +97,10 @@
                                 </button>
                             </div>
 
-                            <input onfocus="ShowOptions('requestFields')" id="textareaFields" type="text" placeholder="Selected Fields" class="materialize-textarea" style="padding: 5px;"></input>
+                            <div>
+                                <input onfocus="ShowOptions('requestFields')" id="textareaFields" type="text" placeholder="Selectionner les champs" class="materialize-textarea" style="padding: 5px;"></input>
+                            </div>
+
                             <div style="display: none;margin-bottom: 10px;" id="requestFields" class="input-field col s12">
                                 <select name="champs" id="champs">
                                     <option value="" disabled selected>Champs</option>
@@ -107,8 +111,9 @@
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
-
-                            <input onfocus="ShowOptions('requestGeomFields')" id="textareaGeometry" type="text" placeholder="Selected Geometry Fields" class="materialize-textarea" style="padding: 5px;"></input>
+                            <div>
+                                <input onfocus="ShowOptions('requestGeomFields')" id="textareaGeometry" type="text" placeholder="Selectionner le champ geometrie" class="materialize-textarea" style="padding: 5px;"></input>
+                            </div>
 
                             <div style="display: none;margin-bottom: 10px;" id="requestGeomFields" class="input-field col s12">
                                 <select name="geometry" id="geometry">
