@@ -7,6 +7,19 @@ function HideOptions(id) {
     //$("#"+id).hide();
 }
 
+function addLayer(name) {
+    var lyr = document.getElementById("lyr0");
+    var newLyr = document.createElement("li");
+    newLyr.class="collection-item";
+    newlyr.name=name;
+    var divLyr = document.createElement("div");
+    divLyr.innerHTML = name;
+    for (i=0;)
+    var layers = document.getElementById("sortable");
+
+
+}
+
 
 function posLayer(id){
     var pos = 1;

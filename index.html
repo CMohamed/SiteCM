@@ -15,8 +15,11 @@
           href = "https://fonts.googleapis.com/icon?family=Material+Icons">
     <link rel = "stylesheet"
           href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
+<!--
     <script type = "text/javascript"
-            src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+            src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
     </script>
 
@@ -32,7 +35,7 @@
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>
-        $( function() {
+        $(document).ready( function() {
             $( "#sortable" ).sortable({
                 //accept : 'sortable_item',
                 axis: 'vertically',
@@ -173,9 +176,11 @@
                 hna andir les couches o atawichs
 
                 <ul id="sortable" class="collection with-header">
-                    <li id="lyr0" class="collection-header"><h5>Layers</h5></li>
+                    <li id="lyr" class="collection-header"><h5>Layers</h5></li>
                     <li id="lyr1" class="collection-item">
-                        <div><i class="material-icons secondary-content">map</i>Region
+                        <div>
+                            Region
+                            <i class="material-icons secondary-content">map</i>
                             <i class="material-icons secondary-content">remove_red_eye</i>
                             <i onclick="$(this).parent().parent().remove()" class="material-icons secondary-content">delete</i>
                             <div style="color:red" class="icon secondary-content" style="position:relative; display:inline-block">
@@ -303,6 +308,24 @@
     <div id="viewDiv">
 
     </div>
+</div>
+
+
+
+<div id="elements" style="display: block;">
+
+    <li id="lyr0" class="collection-item" name="">
+        <div id="layerPrototype">
+            <i class="material-icons secondary-content">map</i>
+            <i class="material-icons secondary-content">remove_red_eye</i>
+            <i onclick="$(this).parent().parent().remove()" class="material-icons secondary-content">delete</i>
+            <div style="color:red" class="icon secondary-content" style="position:relative; display:inline-block">
+                <i class="btnColor material-icons secondary-content" >color_lens</i>
+                <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>
+            </div>
+        </div>
+    </li>
+    
 </div>
 
 </body>
