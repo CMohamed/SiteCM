@@ -75,3 +75,12 @@ input
 .btnColor{
     cursor: pointer;
 }
+
+
+ html, body, #divMap {
+     padding: 0;
+     margin-bottom: 10px;
+     margin-top: 0px;margin-left: 0px;margin-right: 0px;
+     height: 100%;
+     width: 100%;
+ }

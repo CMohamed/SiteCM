@@ -4,16 +4,24 @@
 
     <title>index</title>
 
-    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+
 
     <meta name = "viewport" content = "width = device-width, initial-scale = 1.0">
 
     <link rel = "stylesheet" href = "https://fonts.googleapis.com/icon?family=Material+Icons">
 
     <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/css/materialize.min.css">
-    
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
     <script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.3/js/materialize.min.js">
     </script>
+<!--
+    <script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+-->
+    <link rel="stylesheet" href="https://js.arcgis.com/4.8/esri/css/main.css">
+    <script src="https://js.arcgis.com/4.8/"></script>
+
 
     <link rel="stylesheet" href="css/style.css"/>
     <script  src="js/script.js"></script>
@@ -44,6 +52,7 @@
     <script src="js/autocomplet.js"></script>
     <link rel="stylesheet" href="css/autocomplet.css">
 
+    <script src="js/map.js" ></script>
 
 
 </head>
@@ -344,11 +353,17 @@
 
 
 <!-- Add all page content inside this div if you want the side nav to push page content to the right (not used if you only want the sidenav to sit on top of the page -->
-<div id="main">
-    <span style="font-size:30px;cursor:pointer" onclick="moveNav()"><i class="medium material-icons " style="color: #66c2b5;">compare_arrows</i></span> <!--&#9776;-->
+<div id="main"  style="height: 90% ;padding: 10px">
+    <span style="font-size:20px;cursor:pointer" onclick="moveNav()"><i class="medium material-icons " style="color: #66c2b5;">compare_arrows</i></span> <!--&#9776;-->
 
-    <h2>Home</h2>
+    <h4>CM Platforme</h4>
+
+    <div id="divMap" style=" border: 2px solid #0D47A1 "></div>
+
+
+
 </div>
+
 
 </body>
 </html>
