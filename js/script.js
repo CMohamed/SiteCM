@@ -6,6 +6,14 @@ function initialize() {
     lyrNumber = layers.children.length -1;
 }
 */
+
+function getLayerByPos(pos) {
+    //position start from 1
+    var l = document.getElementById("sortable");
+    layers = l.children ;
+    return layers[pos];
+}
+
 function addLayer(name) {
     /*
     var lyr = document.getElementById("lyr0");
