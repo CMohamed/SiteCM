@@ -92,7 +92,10 @@ function addLayer(name) {
         '            <div class="icon secondary-content" style="position:relative; display:inline-block">\n' +
         '                <i class="btnColor material-icons secondary-content" >color_lens</i>\n' +
         '                <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>\n' +
-        '            </div>\n' +
+        '            </div>\' +
+        '            <p class="range-field">\n' +
+        '                <input type="range" id="test5" min="0" max="100" /> <i class="material-icons secondary-content" style="position: in">invert_colors</i>\n' +
+        '            </p>' +
         '        </div>\n' +
         '    </li>'
     $("#sortable").append(html)
