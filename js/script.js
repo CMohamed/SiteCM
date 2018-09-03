@@ -1,3 +1,21 @@
+function GenerateConfig() {
+    var config ="" ;
+    var url = document.getElementById("url").value ;
+    var driver = document.getElementById("driver").value ;
+    var user = document.getElementById("user").value ;
+    var pass = document.getElementById("pass").value ;
+
+    config = url+"&"+driver+"&"+user+"&"+pass ;
+
+    /*var divConf = document.getElementById("divConf");
+    divConf.innerHTML = config ;*/
+
+    return config;
+}
+
+
+
+
 /*document.addEventListener('DOMConetentLoaded',initialize());
 var layers;
 var lyrNumber;
@@ -6,6 +24,11 @@ function initialize() {
     lyrNumber = layers.children.length -1;
 }
 */
+
+
+function inputChange(evt) {
+    evt.preventDefault();
+}
 
 function getLayerByPos(pos) {
     //position start from 1
