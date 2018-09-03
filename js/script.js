@@ -1,3 +1,109 @@
+function updateSelectList1(id, list){
+    var select = document.getElementById(id);
+    for(i=0; i < list.length;i++){
+        var l = document.createElement("option");
+        l.value = list[i];
+        select.appendChild(l);
+    }
+}
+function updateSelectList(id,opts) {
+    var x = document.getElementById(id);
+    for (i=0;i<opts.length ; i++){
+        var c = document.createElement("option");
+        c.text = opts[i];
+        c.value = opts[i];
+        x.options.add(c,x.children.length);
+    }
+    $("#"+id).material_select();
+}
+
+function removeLayer(){
+    // remove layer by click on delete button
+    //console.log($(this));
+    $(this).parent().parent().remove();
+}
+function showLayer(){
+    // dik conclick dial icons makatkhdamch m3a les fcts m3rftch 3lach mais momkin ndiro chi span ola ...
+}
+
+function hideLayer(){
+    console.log($(this));
+    $(this).hide();
+}
+
+function GenerateConfig() {
+    var config ="" ;
+    var url = document.getElementById("url").value ;
+    var driver = document.getElementById("driver").value ;
+    var user = document.getElementById("user").value ;
+    var pass = document.getElementById("pass").value ;
+
+    config = url+"&"+driver+"&"+user+"&"+pass ;
+
+    /*var divConf = document.getElementById("divConf");
+    divConf.innerHTML = config ;*/
+
+    return config;
+}
+
+
+
+
+/*document.addEventListener('DOMConetentLoaded',initialize());
+var layers;
+var lyrNumber;
+function initialize() {
+    layers = document.getElementById("sortable");
+    lyrNumber = layers.children.length -1;
+}
+*/
+
+
+function inputChange(evt) {
+    evt.preventDefault();
+}
+
+function getLayerByPos(pos) {
+    //position start from 1
+    var l = document.getElementById("sortable");
+    layers = l.children ;
+    return layers[pos];
+}
+
+function addLayer(name) {
+    /*
+    var lyr = document.getElementById("lyr0");
+    var newLyr = document.createElement("li");
+    newLyr.class="collection-item";
+    newlyr.name=name;
+    var divLyr = document.createElement("div");
+    divLyr.innerHTML = name;
+    for (i=0;)
+    var layers = document.getElementById("sortable");
+*/
+    //lyrNumber++;
+    // (id="lyr" +' + lyrNumber.toString() + ') dial li
+    var html = '<li  class="collection-item" name="'+name+'">' +
+        '        <div >' +name+
+        '            <i style="cursor:pointer" class="material-icons secondary-content">map</i>\n' +
+        '            <i style="cursor:pointer" onclick="$(this).hide();$(this).next().show()" class="material-icons secondary-content">visibility</i>\n' +
+        '            <i style="cursor:pointer ;color: #a2a2a2 ;display: none;" onclick="$(this).hide();$(this).prev().show()" class="material-icons secondary-content">visibility_off</i>' +
+        '            <i style="cursor:pointer" onclick="$(this).parent().parent().remove();//lyrNumber--;" class="material-icons secondary-content">delete</i>\n' +
+        '            <div class="icon secondary-content" style="position:relative; display:inline-block">\n' +
+        '                <i class="btnColor material-icons secondary-content" >color_lens</i>\n' +
+        '                <input onchange="btnClr()" type="color" value="#ff0000" style="opacity : 0 ; position:absolute; left:0;top:0;width:100%"/>\n' +
+        '            </div>' +
+        '            <p class="range-field">\n' +
+        '                <input type="range" id="test5" min="0" max="100" /> <i class="material-icons secondary-content" style="position: in">invert_colors</i>\n' +
+        '            </p>' +
+        '        </div>\n' +
+        '    </li>'
+    $("#sortable").append(html)
+
+}
+
+
+
 function ShowOptions(id) {
 //    var opts = document.getElementById("requestTables") ;
     $("#"+id).show();
@@ -40,7 +146,7 @@ function GenerateSQL() {
 function btnClr() {
     var x =document.activeElement;
     var clr = x.value;
-    x.parentNode.style.color=clr; //we can use firstChild
+    x.parentElement.firstElementChild.style.color=clr; //we can use firstChild
 }
 
 function addTable(ev) {

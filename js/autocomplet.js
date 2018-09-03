@@ -20,9 +20,11 @@ $.ajax({
 			fields.push(fieldsDetails[i].column_name);
 			fieldsCom.push(" | type: " + fieldsDetails[i].data_type + " | table: "  + fieldsDetails[i].table_name);
 		}
+		$( document ).ready(function() {
+				autocomplete(document.getElementById("textareaFields"), fields, fieldsCom);
+				autocomplete(document.getElementById("textareaGeometry"), fields, fieldsCom);
+		});
 
-		autocomplete(document.getElementById("textareaFields"), fields, fieldsCom);
-		autocomplete(document.getElementById("textareaGeometry"), fields, fieldsCom);
 
 	}
 });
@@ -41,8 +43,10 @@ $.ajax({
 			listTables[i]=listTables[i].table_name;
 			listTablesCom[i]="";
 		}
+		$( document ).ready(function() {
+			autocomplete(document.getElementById("textareaTables"), listTables,listTablesCom);
+		});
 
-		autocomplete(document.getElementById("textareaTables"), listTables,listTablesCom);
 
 	}
 });
