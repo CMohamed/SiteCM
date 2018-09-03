@@ -14,6 +14,7 @@ function updateSelectList(id,opts) {
         c.value = opts[i];
         x.options.add(c,x.children.length);
     }
+    $("#"+id).material_select();
 }
 
 function removeLayer(){

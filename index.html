@@ -31,6 +31,9 @@
             $('select').material_select();
 
         });
+        $('select').on('contentChanged', function() {
+            $(this).material_select();
+        });
     </script>
 <!--
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
@@ -277,7 +280,7 @@
                 -->
 
                 <div >
-                            <select id="exportFormat" name="exportFormat" >
+                            <select  id="exportFormat" name="exportFormat" >
                                 <option value="Selectioner Format" disabled selected="selected">Selectioner Format</option>
                                 <option value="PDF" >PDF</option>
                                 <option value="JPEG">JPEG</option>
