@@ -5,7 +5,8 @@ var mapMain;
 var view;
 var legend;
 var ListLayerUI = [];
-var fctChangerSymbologie //une fonction
+var fctChangerSymbologie; //une fonction
+var fctRequestToFeatureLayer;
 
 
 require([
@@ -68,7 +69,7 @@ require([
       // Adds an instance of BasemapToggle widget to the
       // top right of the view.
       view.ui.add(toggle, "bottom-right");
-      view.ui.move("zoom", "top-right");
+      view.ui.move("zoom","top-right");
 
 
 
@@ -78,14 +79,16 @@ require([
 // wait for the load event
     view.when(function () {
 
-
-
-
-        view.on("pointer-move", showCoordinates);
+        legend = new Legend({
+                    view: view
+                });
 
         var sss = "http://localhost:9090/requestAny/select%20gid,nature,num,indice,complement,geomjson%20from%20titres%20limit%20400";
 
-        
+
+        fctRequestToFeatureLayer = function RequestToFeatureLayer(laRequete,titre)
+        {
+
         var featuresFinal = [];
         var req = new XMLHttpRequest();
         var symobologie =  new SimpleFillSymbol(SimpleFillSymbol.STYLE_SOLID,
@@ -98,7 +101,7 @@ require([
         var layerB;
         var counties;
         var graphiqueLayer = new GraphicsLayer(); //ce n'est qu'un moyen pour obtenir une collection de graphics
-        req.open("GET", sss , true);
+        req.open("GET", laRequete , true);
         req.addEventListener("load", function () {
             console.log("ee");
 
@@ -217,20 +220,11 @@ require([
                 //on l'ajoute à la liste des couches
                 ListLayerUI.push(layerB);
 
-                mapMain.add(layerB);  
+                mapMain.add(layerB);
 
-                legend = new Legend({
-                    view: view,
+                legend.layerInfos.push({layer:layerB,title:titre});
 
-                    layerInfos: [
-                        {
-                            layer: layerB,
-                            title: "Titres Fonciers"
-                        }
-
-                        ]
-
-                });
+                
 
 
 
@@ -258,6 +252,21 @@ require([
 
         req.send(null);
 
+        return layerB;
+            
+
+        } //fin fonction 
+
+        fctRequestToFeatureLayer(sss,"titre foncier");
+
+
+
+
+        view.on("pointer-move", showCoordinates);
+
+
+
+
 
 
 
@@ -276,6 +285,10 @@ require([
 
 
     }); // fin MapView onLoad
+
+    
+
+
   
     fctChangerSymbologie = function changerSymbologie(indexCouche,r,g,b,a)
     {

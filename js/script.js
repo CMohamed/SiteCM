@@ -40,6 +40,25 @@ function GenerateConfig() {
 
     config = url+"&"+driver+"&"+user+"&"+pass ;
 
+    $.ajax({
+
+    url: able_schema = "http://localhost:9090/changeProperties/"+config, 
+    success: function(req)
+    {
+        
+        console.log(req);
+        $("#conf").removeClass(function(){
+        return "active";
+        });
+        $(".collapsible").collapsible({accordion: true});
+        $(".collapsible").collapsible({accordion: false});
+
+
+
+
+    }
+});
+
     /*var divConf = document.getElementById("divConf");
     divConf.innerHTML = config ;*/
 
@@ -140,7 +159,9 @@ function GenerateSQL() {
     }
     if (conditions =="") sql = sql + "1=1" ;
     else sql = sql + conditions + ";" ;
+    console.log(sql);
     return sql;
+    
 }
 
 function btnClr() {

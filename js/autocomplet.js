@@ -23,6 +23,10 @@ $.ajax({
 		$( document ).ready(function() {
 				autocomplete(document.getElementById("textareaFields"), fields, fieldsCom);
 				autocomplete(document.getElementById("textareaGeometry"), fields, fieldsCom);
+
+				updateSelectList("champs",fields);
+				updateSelectList("geometry",fields);
+
 		});
 
 
@@ -45,6 +49,8 @@ $.ajax({
 		}
 		$( document ).ready(function() {
 			autocomplete(document.getElementById("textareaTables"), listTables,listTablesCom);
+			updateSelectList("tables",listTables);
+
 		});
 
 

@@ -11,6 +11,12 @@
     transition: 0.5s; /* 0.5 second transition effect to slide in the sidenav */
 }
 
+html, body{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 input
 {
     padding: 5px;

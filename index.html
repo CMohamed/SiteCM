@@ -71,6 +71,7 @@
 
 <div id="mySidenav" class="sidenav">
     <!--<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>-->
+    <span style="position:absolute; left:5px; top:5px;font-size:20px;cursor:pointer" onclick="moveNav()"><i class="medium material-icons " style="color: #66c2b5;">compare_arrows</i></span>
 
     <h3>Menu</h3>
     <!--
@@ -104,14 +105,11 @@
 
                         <form action="" method="get" id="attributeRequest">
 
-<<<<<<< HEAD
+
                             <div>
                                 <input onfocus="ShowOptions('requestTables')" id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 5px;"></input>
                             </div>
-=======
-                            <input onfocus="ShowOptions('requestTables')" onchange="inputChange(event)" id="textareaTables" type="text" placeholder="Selected Tables" class="materialize-textarea" style="padding: 5px;"></input>
-                            <div id="textareaTablesAutoComplete"></div>
->>>>>>> aa5d6d9da33f7c8fe6b9154cd52db011c4a0f85a
+
 
                             <div style="display: none;margin-bottom: 10px;" id="requestTables" class="input-field col s12">
                                 <select name="tables" id="tables">
@@ -124,14 +122,12 @@
                                 </button>
                             </div>
 
-<<<<<<< HEAD
                             <div>
                                 <input onfocus="ShowOptions('requestFields')" id="textareaFields" type="text" placeholder="Selectionner les champs" class="materialize-textarea" style="padding: 5px;"></input>
                             </div>
 
-=======
-                            <input onfocus="ShowOptions('requestFields')" onchange="inputChange(event)" id="textareaFields" type="text" placeholder="Selected Fields" class="materialize-textarea" style="padding: 5px;"></input>
->>>>>>> aa5d6d9da33f7c8fe6b9154cd52db011c4a0f85a
+
+
                             <div style="display: none;margin-bottom: 10px;" id="requestFields" class="input-field col s12">
                                 <select name="champs" id="champs">
                                     <option value="" disabled selected>Champs</option>
@@ -142,14 +138,11 @@
                                     <i class="material-icons">add</i>
                                 </button>
                             </div>
-<<<<<<< HEAD
+
                             <div>
                                 <input onfocus="ShowOptions('requestGeomFields')" id="textareaGeometry" type="text" placeholder="Selectionner le champ geometrie" class="materialize-textarea" style="padding: 5px;"></input>
                             </div>
-=======
 
-                            <input onfocus="ShowOptions('requestGeomFields')" onchange="inputChange(event)" id="textareaGeometry" type="text" placeholder="Selected Geometry Fields" class="materialize-textarea" style="padding: 5px;"></input>
->>>>>>> aa5d6d9da33f7c8fe6b9154cd52db011c4a0f85a
 
                             <div style="display: none;margin-bottom: 10px;" id="requestGeomFields" class="input-field col s12">
                                 <select name="geometry" id="geometry">
@@ -334,7 +327,7 @@
             </span></div>
         </li>
         <li>
-            <div class="collapsible-header"><i class="material-icons">storage</i>Configuration</div>
+            <div class="collapsible-header" id="conf"><i class="material-icons">storage</i>Configuration</div>
             <div class="collapsible-body container" style="width: 95%;">
                 <span>
                 <div id="iconsConfig" style="opacity: 0">vpn_lock/tune/assignment.</div>
@@ -425,14 +418,18 @@
 
 
 
-    <div id="divMap" style="height: 763px; border: 2px solid #0D47A1 ">
-            <span style="font-size:20px;cursor:pointer" onclick="moveNav()"><i class="esri-ui-top-left esri-ui-corner medium material-icons " style="color: #66c2b5;">compare_arrows</i></span>
+    <div id="divMap" style="height: 100%; border: 2px solid #0D47A1 ">
+        
+
+            
             <span id="info" style="position:absolute; left:15px; bottom:5px; color:#fff; z-index:50;"></span>
     </div>
 
 
 
 </div>
+
+ <span style="position:absolute; left:5px; top:5px;font-size:20px;cursor:pointer" onclick="moveNav()"><i class="medium material-icons " style="color: #66c2b5;">compare_arrows</i></span>
 
 
 </body>
